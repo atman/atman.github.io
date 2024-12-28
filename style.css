@@ -1,21 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+
 body {
-  max-width: 40em;
-  margin: 0 auto;
-  padding: 5px;
-  font-family: sans-serif;
-  font-size: 18px;
-  line-height: 1.6em;
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 1.4em;
+  background-color: #EEEEEE;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background-color: #333;
+  /* Change to your desired color */
 }
 
 h1,
 h2,
 h3 {
-  font-family: sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0px;
 }
+
 
 h6 {
   font-weight: 400;
+}
+
+/* Using the full border property */
+.border-element {
+  border: 1px solid black;
+  padding: 2px 8px 2px 8px;
+  margin: 0px;
+}
+
+.bg-color-grey {
+  background: #EEEEEE;
+}
+
+.container {
+  background-color: white;
+  max-width: 48em;
+  border: 1px solid black;
+  margin: 0 auto;
+  padding: 16px;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .footer-links {
