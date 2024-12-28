@@ -1,29 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-
-
-body {
-  font-family: 'Roboto';
-  font-size: 14px;
-  line-height: 1.4em;
-  background-color: #EEEEEE;
-}
-
 hr {
   height: 1px;
   border: none;
   background-color: #333;
   /* Change to your desired color */
 }
-
-h1,
-h2,
-h3 {
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: bold;
-  font-size: 1rem;
-  margin-bottom: 0px;
-}
-
 
 h6 {
   font-weight: 400;
