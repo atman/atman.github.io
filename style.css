@@ -1,7 +1,7 @@
 hr {
   height: 1px;
   border: none;
-  background-color: #333;
+  background-color: #838383;
   /* Change to your desired color */
 }
 
@@ -11,43 +11,76 @@ h6 {
 
 /* Using the full border property */
 .border-element {
-  border: 1px solid black;
-  padding: 2px 8px 2px 8px;
-  margin: 0px;
+  /* border: 1px solid black; */
+  /* padding: 4px 4px 4px 8px; */
+}
+
+.px-8 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .bg-color-grey {
-  background: #EEEEEE;
+  /* background: #EEEEEE; */
 }
 
 .container {
   background-color: white;
   max-width: 48em;
-  border: 1px solid black;
-  margin: 0 auto;
-  padding: 16px;
+  /* border: 1px solid black; */
+  margin: 2em auto;
+  padding: 1em 2em;
   box-shadow: 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .footer-links {
   list-style: none;
-  /* Remove default list styling */
-  margin: 0;
-  /* Remove default margin */
   padding: 0;
-  /* Remove default padding */
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .footer-links li {
-  display: inline-block;
-  /* Display links in a row */
-  margin-right: 20px;
-  /* Add some space between the links */
+  margin: 0;
 }
-
 
 /* Hover effect for links */
 .footer-links li a:hover {
   color: #007BFF;
   /* Change color on hover */
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 10px;
+}
+
+.footer-text {
+  margin: 0;
+  text-align: right;
+}
+
+@media screen and (min-width: 768px) {
+  .block {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-links {
+    flex: 1;
+  }
+  
+  .footer-text {
+    flex-shrink: 0;
+  }
 }
