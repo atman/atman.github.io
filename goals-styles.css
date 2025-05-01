@@ -24,9 +24,103 @@ body {
     min-height: 98vh;
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     position: relative;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .container {
+        margin: 0;
+        padding: 1em;
+        min-height: 100vh;
+        box-shadow: none;
+    }
+
+    .post-it.left,
+    .post-it.right {
+        display: none !important;
+    }
+
+    .grid {
+        display: block;
+    }
+
+    .grid-item {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .month-year {
+        font-size: 2.5rem;
+        margin: 0.5em 0;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 1em;
+        margin: 1em 0;
+    }
+
+    .print-btn,
+    .reset-btn {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .footer-text {
+        order: -1;
+        margin-bottom: 1em;
+    }
+}
+/* Post-it note styles */
+.post-it {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: #fff6a6;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transform: rotate(-3deg);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--main-font);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 10px;
+    line-height: 1.2;
+}
+
+.post-it::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    border-color: transparent #f3dd70 transparent transparent;
+}
+
+/* Left post-it */
+.post-it.left {
+    top: 15%;
+    left: -8.5em;
+    transform: rotate(-5deg);
+}
+
+/* Right post-it */
+.post-it.right {
+    top: 37%;
+    right: -8em;
+    transform: rotate(5deg);
 }
 
 /* Add paper texture */
@@ -201,6 +295,15 @@ body {
         size: letter;
     }
 
+    .add-item-btn,
+    .remove-item-btn {
+        display: none;
+    }
+
+    .grid-item {
+        margin-bottom: 0.2em;
+    }
+
     body {
         padding: 0pt;
         font-size: 11pt;
@@ -208,8 +311,8 @@ body {
     }
 
     .container {
-        padding-left: 24pt;
-        padding-right: 24pt;
+        padding-left: 18pt;
+        padding-right: 18pt;
         margin: 0em auto;
         box-shadow: none;
     }
@@ -224,7 +327,7 @@ body {
     }
 
     .month-year {
-        margin: 10pt 0 10pt;
+        margin: 4pt 0 4pt;
     }
 
     .section {
@@ -262,7 +365,7 @@ body {
 
 .section-controls {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     white-space: nowrap;
 }
 
